@@ -36,6 +36,8 @@ app.get("/", (req, res) => {
   res.send("OK");
 });
 
-app.listen(3000, () => {
-  console.log("running");
+const port = process.env.PORT || 10000;
+
+app.listen(port, "0.0.0.0", () => {
+  console.log("running on port " + port);
 });
